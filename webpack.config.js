@@ -26,6 +26,18 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.png|jpg/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              esModule: false,
+              name: 'images/[name].ext',
+            },
+          },
+        ],
+      },
     ],
   },
   //注意: 並列関係,plugins
