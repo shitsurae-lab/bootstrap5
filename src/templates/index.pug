@@ -1,0 +1,9 @@
+extends _layout.pug
+//- extendsで定義したblockを上書きするため、-layout.pugの下に書く
+block locals
+  - var title = 'Hello pug !'
+block content
+  h1 webpack html loader
+  p こちらはテンプレートから出力されています
+  img(src="../images/icon-webpack.png")
+  img(src="../images/thumbnail-webpack.jpg")
