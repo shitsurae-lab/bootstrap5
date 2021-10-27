@@ -28,14 +28,19 @@ module.exports = {
       },
       {
         test: /\.png|jpg/,
+        //以下4行はwebpack5のasett modulesの機能(file-loaderやurl-loaderはいらなくなる)
+        type: 'asset/resource',
+        generator: {
+          filename: 'images/[name][ext]',
+        },
         use: [
-          {
-            loader: 'file-loader',
-            options: {
-              esModule: false,
-              name: 'images/[name].ext',
-            },
-          },
+          //  {
+          //  loader:'file-loader',
+          //   options: {
+          //     esModule: false,
+          //     name: 'images[name]//.ext',
+          //   },
+          //  },
         ],
       },
     ],
