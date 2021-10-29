@@ -1,0 +1,22 @@
+@use 'global' as global;
+
+@mixin set-margin($direction, $value) {
+  margin-#{$direction}: $value;
+}
+
+body {
+  color: lightblue;
+}
+
+.content {
+  .p-headline {
+    font-size: 24px;
+    color: global.$primary-color;
+    display: block;
+  }
+  .p-heading {
+    @extend .p-headline;
+    font-size: 20px;
+  }
+  @include set-margin(left, 16px);
+}

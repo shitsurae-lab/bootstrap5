@@ -3,7 +3,9 @@ extends _layout.pug
 block locals
   - var title = 'Hello pug !'
 block content
-  h1 webpack html loader
-  p こちらはテンプレートから出力されています
-  img(src="../images/icon-webpack.png")
-  img(src="../images/thumbnail-webpack.jpg")
+  .content
+    h1.p-headline webpack html loader
+    h2.p-heading こちらは見出し2です
+    p こちらはテンプレートから出力されています
+    img(src="../images/icon-webpack.png")
+    img(src="../images/thumbnail-webpack.jpg")
