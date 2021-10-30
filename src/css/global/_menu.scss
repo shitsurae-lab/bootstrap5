@@ -1,0 +1,12 @@
+.p-index__list {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.p-index__item {
+  list-style-type: none;
+  a {
+    text-decoration: none;
+  }
+}

@@ -18,5 +18,5 @@ body {
     @extend .p-headline;
     font-size: 20px;
   }
-  @include set-margin(left, 16px);
+  @include set-margin(left, 24px);
 }

@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack serve --mode=development",
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,7 @@
     "fibers": "^5.0.0",
     "html-loader": "^3.0.0",
     "html-webpack-plugin": "^5.4.0",
+    "image-webpack-loader": "^8.0.1",
     "mini-css-extract-plugin": "^2.4.3",
     "pug-html-loader": "^1.1.5",
     "sass": "^1.43.4",

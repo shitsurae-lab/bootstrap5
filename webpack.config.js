@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 module.exports = {
+  mode: 'development',
   entry: {
     main: './src/js/main.js',
   },
@@ -81,6 +82,16 @@ module.exports = {
           //     name: 'images[name]//.ext',
           //   },
           //  },
+          {
+            //image-webpack-loader(https://github.com/tcoopman/image-webpack-loader)
+            loader: 'image-webpack-loader',
+            options: {
+              mozjpeg: {
+                progressive: true,
+                quality: 65,
+              },
+            },
+          },
         ],
       },
       {
@@ -119,4 +130,8 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   devtool: 'source-map',
+  // WARNING in child compilations
+  // stats: {
+  //   children: true,
+  // },
 };
