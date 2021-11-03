@@ -4,8 +4,13 @@ block locals
   - var title = 'Hello pug !'
 block content
   .content
+    .mv
     h1.p-headline webpack html loader
     h2.p-heading こちらは見出し2です
     p こちらはテンプレートから出力されています
+    .container: .row.gx-6
+      .col-4 テストでござる
+      .col-4 テストだよ
+      .col-4 テスト
     img(src="../images/icon-webpack.png")
     img(src="../images/thumbnail-webpack.jpg")
